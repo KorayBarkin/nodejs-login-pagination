@@ -28,7 +28,7 @@ app.post('/login', (req, res) => {
 
 // Retrieve the name of a user by their ID
 app.get('/users/:id', (req, res) => {
-  const userId = parseInt(req.query.id);
+  const userId = parseInt(req.params.id);
   let user = users.find(u => u.id == userId);
 
   if (user) {
